@@ -1,0 +1,49 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 800px
+    
+  .hero
+    padding: 46px 0
+    &_block
+      flex-direction: column
+    &_text
+      max-width: 100%
+    &_list
+      margin-bottom: 40px
+      &__text
+        max-width: calc(100% - 55px)
+    &_image
+      max-width: 100%
+      .hero_image_picture
+        width: 100%
+
+@media (max-width: 768px)
+  .container
+    min-width: 280px
+    width: 100%
+  .navbar
+    &__logo
+      width: 91px
+    &__contacts
+      display: none
+    &__button
+      padding: 15px 26px 14px
+      font-size: 10px
+  .hero
+    padding: 46px 0
+    &_text
+      &__title
+        margin-bottom: 8px
+        font-size: 24px
+        line-height: 31px
+      &__subtitle
+        margin-bottom: 28px
+        font-size: 16px
+    &_list
+      &__item
+        margin-bottom: 20px
+      &__image
+        margin-right: 15px
+      &__text
+        font-size: 12px
+        line-height: 14px
