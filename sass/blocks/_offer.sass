@@ -1,0 +1,58 @@
+.offer
+  position: relative
+  background-color: #a0918c
+  background: url(../img/offer/offer_bg.png) no-repeat
+  background-position: center right
+  background-size: contain
+  &:before
+    position: absolute
+    left: 0
+    top: 0
+    content: ''
+    width: 50%
+    height: 100%
+    background-color: #fff
+  &_block
+    position: relative
+    width: 50%
+    padding-right: 91px
+  &__title
+    max-width: 350px
+    margin-bottom: 19px
+    font-size: 24px
+    font-weight: 700
+    line-height: 35px
+  &__subtitle
+    display: block
+    margin-bottom: 30px
+    max-width: 235px
+    font-size: 16px
+  &__form
+    margin-bottom: 30px
+  &__input
+    width: 240px
+    margin-bottom: 30px
+    &:first-child
+      margin-right: 10px
+  &__input:last-child
+    padding-left: 33px
+  &__button
+    width: 100%
+    height: 70px
+    font-size: 16px
+    font-weight: 700
+  &__recall_block
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    font-size: 15px
+    line-height: 24px
+    &_call
+      max-width: 225px
+      margin-bottom: 7px
+    &_recall
+      max-width: 200px

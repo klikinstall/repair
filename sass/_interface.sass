@@ -1,8 +1,7 @@
-*
+*, *:before, *:after
   box-sizing: border-box
 body
   min-width: 320px
-  padding-top: 100px
   font-family: "Museo Sans Cyrl", sans-serif
   font-weight: 300
   color: $text_color
@@ -10,11 +9,15 @@ a
   color: $text_color
 img
   max-width: 100%
+.text_bold
+  font-weight: 700
 .container
   max-width: 1210px
   margin: auto
   padding-right: 20px
   padding-left: 20px
+.section
+  padding: 84px 0 94px
 .button
   display: -webkit-flex
   display: -moz-flex
@@ -26,3 +29,18 @@ img
   border-radius: 10px
   border: none
   background-color: $main_color
+  &:hover
+    background-color: lighten($main_color, 13%)
+    cursor: pointer
+.input
+  height: 65px
+  padding: 0 26px
+  line-height: 65px
+  border-radius: 10px
+  border: 1px solid $input_border_color
+  &:placeholder
+    font-size: 15px
+    color: $text_color
+  &:focus
+    border-color: $main_color
+    outline: none
