@@ -43,7 +43,13 @@ img {
 }
 
 .section {
-  padding: 79px 0 94px;
+  padding: 79px 0 82px;
+}
+.section_title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 45px;
+  text-align: center;
 }
 
 .button {
@@ -100,6 +106,10 @@ img {
 }
 .button_up:hover {
   background-color: #ffe04d;
+}
+
+.arrows__left, .arrows__right {
+  cursor: pointer;
 }
 
 .navbar {
@@ -188,7 +198,7 @@ img {
   display: -o-flex;
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 .hero_list__item:last-child {
   margin-bottom: 0;
@@ -227,7 +237,7 @@ img {
   position: relative;
   background-color: #a0918c;
   background: url(../img/offer/offer_bg.png) no-repeat;
-  background-position: center right;
+  background-position: 136% center;
   background-size: contain;
 }
 .offer:before {
@@ -246,7 +256,7 @@ img {
 }
 .offer__title {
   max-width: 350px;
-  margin: 0 0 19px 0;
+  margin: 0 0 17px 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 35px;
@@ -293,6 +303,47 @@ img {
 }
 .offer__recall_block_recall {
   max-width: 200px;
+}
+
+.portfolio {
+  background-color: #f5f5f5;
+  background: #f5f5f5 url(../img/portfolio/portfolio_pattern.jpg) repeat-y center left;
+  background-size: 50%;
+}
+.portfolio__title {
+  max-width: 790px;
+  margin: 10px auto 93px;
+  color: #000;
+}
+.portfolio__title_first_string {
+  display: block;
+}
+.portfolio_slider {
+  width: 1198px;
+}
+
+.arrows {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  max-width: 120px;
+  margin: auto;
+  margin-top: 68px;
+}
+.arrows__left, .arrows__right {
+  width: 45px;
+  height: 19px;
+  overflow: hidden;
+}
+.arrows__image {
+  width: 120px;
+  max-width: 120px;
+}
+.arrows__image_right {
+  margin-left: -75px;
 }
 
 .modal {
@@ -355,6 +406,7 @@ img {
   }
 
   .offer {
+    background-position: 100% center;
     background-size: cover;
   }
   .offer__input {
@@ -364,11 +416,22 @@ img {
   .offer__button {
     font-size: 14px;
   }
+
+  .portfolio__title_first_string {
+    display: inline;
+  }
+  .portfolio_slider {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .container {
     min-width: 280px;
     width: 100%;
+  }
+
+  .section {
+    padding: 42px 0 50px;
   }
 
   .navbar {
@@ -389,22 +452,22 @@ img {
   }
 
   .hero {
-    padding: 26px 0;
+    padding: 26px 0 51px;
   }
   .hero_text__title {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     padding-left: 5px;
     font-size: 24px;
     line-height: 30px;
   }
   .hero_text__subtitle {
     margin-bottom: 28px;
-    padding-left: 6px;
+    padding-left: 8px;
     font-size: 16px;
   }
   .hero_list__item {
     margin-bottom: 20px;
-    margin-left: 6px;
+    margin-left: 3px;
   }
   .hero_list__image {
     margin-right: 15px;
@@ -412,6 +475,10 @@ img {
   .hero_list__text {
     font-size: 12px;
     line-height: 14px;
+  }
+  .hero_image {
+    margin-left: 5px;
+    margin-right: 7px;
   }
 
   .offer {
@@ -425,25 +492,49 @@ img {
   }
   .offer__title {
     max-width: 260px;
-    margin-bottom: 18px;
+    margin-top: 8px;
+    margin-bottom: 19px;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 22px;
   }
   .offer__subtitle {
-    margin-bottom: 26px;
+    margin-bottom: 25px;
     font-size: 14px;
+    line-height: 17px;
   }
   .offer__form {
-    margin-bottom: 23px;
+    margin-bottom: 22px;
   }
   .offer__input {
     margin-bottom: 8px;
+    padding: 0 21px;
+  }
+  .offer__input:last-of-type {
+    margin-bottom: 10px;
   }
   .offer__button {
     padding: 0 62px;
+    line-height: 19px;
   }
   .offer__recall_block {
     padding-left: 6px;
+  }
+
+  .portfolio_slider__image {
+    max-width: 246px;
+    margin: auto;
+  }
+  .portfolio__title {
+    margin: 0 auto 41px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .portfolio__title_first_string {
+    display: block;
+  }
+
+  .arrows {
+    margin-top: 46px;
   }
 }
 

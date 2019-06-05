@@ -25,4 +25,29 @@ $(document).ready(function(){
       scrollTop: 0
     }, delay);
   });
+  
+  //Скрипт для слайдера
+  $('.portfolio_slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.arrows__left'),
+    nextArrow: $('.arrows__right'),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 });
