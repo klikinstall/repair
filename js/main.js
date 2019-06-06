@@ -8,6 +8,8 @@
 //close.addEventListener('click', function() {
 //  modal.classList.remove('modal_active');
 //});
+// Инициализация WOW.js
+new WOW().init();
 
 $(document).ready(function(){
   //Скрипт для кнопки "Наверх"
