@@ -2,6 +2,7 @@
   .portfolio
     &_slider
       width: 100%
+      
 @media (max-width: 1200px)
   .container
     max-width: 800px
@@ -47,6 +48,22 @@
       right: -29px
       width: 55px
       height: 75px
+    
+  .brif
+    background-size: cover
+    &__interview
+      padding-right: 30px
+    &__form
+      padding-left: 40px
+      
+  .interview
+    &__title
+      margin-bottom: 20px
+    &__subtitle
+      margin-bottom: 45px
+      
+  .contacts
+    padding-left: 50px
 
 @media (max-width: 768px)
   .container
@@ -177,3 +194,86 @@
         margin-bottom: 32px
       &_block
         flex-direction: column
+  
+  .brif
+    padding: 0
+    background-image: none
+    &:before
+      display: none
+    &_block
+      flex-direction: column
+    &__interview, &__form
+      flex-basis: 100%
+    &__interview
+      position: relative
+      &:before
+        position: absolute
+        left: -20px
+        top: 0
+        content: ""
+        width: calc(100% + 40px)
+        height: 100%
+        background-color: $main_color
+    
+    &__form
+      position: relative
+      padding-left: 0
+      & > *
+        position: relative
+      &:before
+        position: absolute
+        left: -20px
+        top: 0
+        content: ""
+        width: calc(100% + 40px)
+        height: 100%
+        background: #fff url(../img/brif/brif_bg.jpg) no-repeat center
+        background-size: cover
+    &__button
+      margin: 15px auto 33px
+      
+  .interview
+    & > *
+      position: relative
+    &__title
+      margin-top: 46px
+      font-size: 18px
+      line-height: 21px
+    &__subtitle
+      font-size: 14px
+      line-height: 17px
+    &_list
+      margin-bottom: 68px
+      &__item:last-child
+        margin-bottom: 0
+      &__counter, &__text
+        font-size: 14px
+        font-weight: 700
+  .form
+    &__title
+      font-size: 18px
+      line-height: 21px
+    &__subtitle
+      font-size: 14px
+      line-height: 17px
+    &__description
+      max-width: 140px
+  
+  .footer
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: column
+  .map
+    order: 2
+    position: static
+    width: 100%
+  .contacts
+    flex-basis: 100%
+    padding: 67px 0 0 0
+    &_block
+      width: 100%
+    &_title
+      margin-top: 0

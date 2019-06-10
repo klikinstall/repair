@@ -67,6 +67,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 70px;
   border-radius: 10px;
   border: none;
   background-color: #ffd200;
@@ -91,6 +92,14 @@ img {
 .input:focus {
   border-color: #ffd200;
   outline: none;
+}
+
+.form .invalid {
+  border: 1px solid red;
+}
+
+#username-error, #phone-error, #email-error {
+  border: none;
 }
 
 .button_up {
@@ -259,7 +268,7 @@ img {
 .offer_block {
   position: relative;
   width: 50%;
-  padding-right: 91px;
+  max-width: 495px;
 }
 .offer__title {
   max-width: 350px;
@@ -278,18 +287,30 @@ img {
   margin-bottom: 25px;
 }
 .offer__input {
+  display: block;
+  width: 100%;
+  margin-right: 0;
+}
+.offer__input_wrap {
+  position: relative;
+  display: inline-block;
   width: 240px;
   margin-bottom: 30px;
 }
-.offer__input:first-child {
+.offer__input_wrap:first-child {
   margin-right: 10px;
 }
 .offer__input:last-child {
   padding-left: 33px;
 }
+.offer #username-error, .offer #phone-error {
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  background-color: #fff;
+}
 .offer__button {
   width: 100%;
-  height: 70px;
   font-size: 16px;
   font-weight: 700;
 }
@@ -509,6 +530,176 @@ img {
   line-height: 20px;
 }
 
+.brif {
+  position: relative;
+  background: #fff url(../img/brif/brif_bg.jpg) no-repeat center right;
+  background-size: contain;
+}
+.brif:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-color: #ffd200;
+}
+.brif_block {
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.brif__interview, .brif__form {
+  flex-basis: 50%;
+}
+.brif__form {
+  padding-left: 213px;
+  text-align: center;
+}
+.brif__input, .brif__button {
+  width: 100%;
+  max-width: 370px;
+}
+.brif__input {
+  margin-bottom: 15px;
+}
+.brif__button {
+  margin-top: 15px;
+  margin-bottom: 33px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.interview__title {
+  margin-bottom: 50px;
+  padding-right: 70px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+}
+.interview__subtitle {
+  display: block;
+  margin-bottom: 94px;
+  font-size: 16px;
+  line-height: 45px;
+}
+.interview_list {
+  padding: 0;
+  list-style-type: none;
+}
+.interview_list__item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.interview_list__counter {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 32px;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+.interview_list__text {
+  max-width: calc(100% - 67px);
+  font-size: 18px;
+}
+
+.form__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+}
+.form__subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 35px;
+}
+.form__inputs {
+  margin-top: 49px;
+}
+.form__description {
+  display: block;
+  margin: auto;
+  margin-bottom: 34px;
+  font-size: 15px;
+}
+
+.footer {
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+}
+
+.contacts {
+  flex-basis: 50%;
+  padding-top: 100px;
+  padding-left: 215px;
+}
+.contacts_block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.contacts_title {
+  max-width: 295px;
+  font-size: 22px;
+  line-height: 33px;
+}
+.contacts_list {
+  padding: 0;
+  list-style-type: none;
+}
+.contacts_list__item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.contacts_list__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 25px;
+  line-height: 20px;
+  text-align: center;
+}
+.contacts_list__text {
+  max-width: 140px;
+  margin: 0;
+  font-size: 16px;
+}
+.contacts_list__text_bold {
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+}
+.contacts_list__text_link:hover {
+  text-decoration: underline;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -603,6 +794,27 @@ img {
     right: -29px;
     width: 55px;
     height: 75px;
+  }
+
+  .brif {
+    background-size: cover;
+  }
+  .brif__interview {
+    padding-right: 30px;
+  }
+  .brif__form {
+    padding-left: 40px;
+  }
+
+  .interview__title {
+    margin-bottom: 20px;
+  }
+  .interview__subtitle {
+    margin-bottom: 45px;
+  }
+
+  .contacts {
+    padding-left: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -772,6 +984,113 @@ img {
   }
   .steps_block {
     flex-direction: column;
+  }
+
+  .brif {
+    padding: 0;
+    background-image: none;
+  }
+  .brif:before {
+    display: none;
+  }
+  .brif_block {
+    flex-direction: column;
+  }
+  .brif__interview, .brif__form {
+    flex-basis: 100%;
+  }
+  .brif__interview {
+    position: relative;
+  }
+  .brif__interview:before {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    content: "";
+    width: calc(100% + 40px);
+    height: 100%;
+    background-color: #ffd200;
+  }
+  .brif__form {
+    position: relative;
+    padding-left: 0;
+  }
+  .brif__form > * {
+    position: relative;
+  }
+  .brif__form:before {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    content: "";
+    width: calc(100% + 40px);
+    height: 100%;
+    background: #fff url(../img/brif/brif_bg.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .brif__button {
+    margin: 15px auto 33px;
+  }
+
+  .interview > * {
+    position: relative;
+  }
+  .interview__title {
+    margin-top: 46px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .interview__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .interview_list {
+    margin-bottom: 68px;
+  }
+  .interview_list__item:last-child {
+    margin-bottom: 0;
+  }
+  .interview_list__counter, .interview_list__text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .form__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .form__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .form__description {
+    max-width: 140px;
+  }
+
+  .footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map {
+    order: 2;
+    position: static;
+    width: 100%;
+  }
+
+  .contacts {
+    flex-basis: 100%;
+    padding: 67px 0 0 0;
+  }
+  .contacts_block {
+    width: 100%;
+  }
+  .contacts_title {
+    margin-top: 0;
   }
 }
 

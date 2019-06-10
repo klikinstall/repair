@@ -1,0 +1,88 @@
+.brif
+  position: relative
+  background: #fff url(../img/brif/brif_bg.jpg) no-repeat center right
+  background-size: contain
+  &:before
+    position: absolute
+    left: 0
+    top: 0
+    content: ""
+    width: 50%
+    height: 100%
+    background-color: $main_color
+  &_block
+    position: relative
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-wrap: wrap
+  &__interview, &__form
+    flex-basis: 50%
+  &__form
+    padding-left: 213px
+    text-align: center
+  &__input, &__button
+    width: 100%
+    max-width: 370px
+  &__input
+    margin-bottom: 15px
+  &__button
+    margin-top: 15px
+    margin-bottom: 33px
+    font-size: 16px
+    font-weight: 700
+.interview
+  &__title
+    margin-bottom: 50px
+    padding-right: 70px
+    font-size: 22px
+    font-weight: 700
+    line-height: 33px
+  &__subtitle
+    display: block
+    margin-bottom: 94px
+    font-size: 16px
+    line-height: 45px
+  &_list
+    padding: 0
+    list-style-type: none
+    &__item
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      align-items: center
+      margin-bottom: 25px
+      font-weight: 700
+    &__counter
+      display: inline-block
+      width: 35px
+      height: 35px
+      margin-right: 32px
+      font-size: 14px
+      line-height: 35px
+      text-align: center
+      border: 2px solid $text_color
+      border-radius: 50%
+    &__text
+      max-width: calc(100% - 67px)
+      font-size: 18px
+.form
+  &__title
+    font-size: 22px
+    font-weight: 700
+    line-height: 33px
+  &__subtitle
+    font-size: 16px
+    font-weight: 300
+    line-height: 35px
+  &__inputs
+    margin-top: 49px
+  &__description
+    display: block
+    margin: auto
+    margin-bottom: 34px
+    font-size: 15px

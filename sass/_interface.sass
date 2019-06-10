@@ -36,6 +36,7 @@ img
   display: flex
   justify-content: center
   align-items: center
+  height: 70px
   border-radius: 10px
   border: none
   background-color: $main_color
@@ -55,6 +56,14 @@ img
   &:focus
     border-color: $main_color
     outline: none
+  
+.form
+  .invalid
+    border: 1px solid red
+    
+#username-error, #phone-error, #email-error
+  border: none
+  
 .button_up
   position: fixed
   z-index: 1500

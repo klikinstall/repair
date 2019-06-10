@@ -15,7 +15,7 @@
   &_block
     position: relative
     width: 50%
-    padding-right: 91px
+    max-width: 495px
   &__title
     max-width: 350px
     margin: 0 0 20px 0
@@ -30,15 +30,25 @@
   &__form
     margin-bottom: 25px
   &__input
-    width: 240px
-    margin-bottom: 30px
-    &:first-child
-      margin-right: 10px
+    display: block
+    width: 100%
+    margin-right: 0
+    &_wrap
+      position: relative
+      display: inline-block
+      width: 240px
+      margin-bottom: 30px
+      &:first-child
+        margin-right: 10px
   &__input:last-child
     padding-left: 33px
+  #username-error, #phone-error
+    position: absolute
+    bottom: -20px
+    left: -10px
+    background-color: #fff
   &__button
     width: 100%
-    height: 70px
     font-size: 16px
     font-weight: 700
   &__recall_block

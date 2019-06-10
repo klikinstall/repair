@@ -52,4 +52,65 @@ $(document).ready(function(){
       }
     ]
   });
+  
+  /* Скрипт для валидации форм */
+  $("#brif_form").validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      phone: {
+        required: true
+      }
+    },
+    messages: {
+        username: {
+          required: "Укажите имя",
+          minlength: jQuery.validator.format("Необходимо ввести минимум символов: {0}"),
+          maxlength: jQuery.validator.format("Возможный максимум символов: {0}")
+        },
+        phone: {
+          required: "Укажите телефон"
+        },
+        email: "Введите корректный email"
+      },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+  
+  $("#offer_form").validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      phone: {
+        required: true
+      }
+    },
+    messages: {
+        username: {
+          required: "Укажите имя",
+          minlength: jQuery.validator.format("Необходимо ввести минимум символов: {0}"),
+          maxlength: jQuery.validator.format("Возможный максимум символов: {0}")
+        },
+        phone: {
+          required: "Укажите телефон"
+        }
+      },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+  
+  
+  /* Скрипт для маски телефона */
+  $(".phone").mask("8 (999) 999-99-99");
+  
 });
